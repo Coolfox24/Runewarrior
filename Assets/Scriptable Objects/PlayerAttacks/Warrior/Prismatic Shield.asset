@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df30c22d7fe79643a2aa6ec0823149f, type: 3}
+  m_Name: Prismatic Shield
+  m_EditorClassIdentifier: 
+  runesRequired:
+  - rune: 1
+    amount: 1
+  - rune: 2
+    amount: 1
+  - rune: 3
+    amount: 1
+  - rune: 4
+    amount: 1
+  - rune: 5
+    amount: 1
+  - rune: 6
+    amount: 1
+  totalPotency: 30
+  potencyTriggersInAnimation: 1
+  attackAnimation: {fileID: 7400000, guid: cc2e8cd438025a8489a4588f73faccdb, type: 2}
+  isMelee: 0
+  spellVFX: {fileID: 2407740654961835590, guid: 9f4a3a683cd26f240b36e3b86266da7b, type: 3}
+  animationSFX: {fileID: 8300000, guid: 187aa3861825c1240ad0c00b380bdd5c, type: 3}
+  attackName: Prismatic Shield

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb863da68326ef147babf607159a1da1, type: 3}
+  m_Name: Tier1_Slime3
+  m_EditorClassIdentifier: 
+  backgroundColor: {r: 0.740566, g: 1, b: 0.77472514, a: 1}
+  rewardType: 5
+  rewardAmount: 2
+  rewardsShown: 4
+  backgroundTiles: {fileID: 2367087044895843592, guid: a9d73e29bc27c694f811ac2dca40e913, type: 3}
+  roomSprite: {fileID: 7271948157428099105, guid: 758d2116648069b41b0f83a4fe825565, type: 3}
+  enemy: {fileID: 11400000, guid: baafa04c3b37746489b5d40b09410f9d, type: 2}
+  roomTier: 1

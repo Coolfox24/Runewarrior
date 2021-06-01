@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - vfxContainer
+  - Canvas
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Enemy
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Room
+    uniqueID: 867975033
+    locked: 0
+  - name: Blackout
+    uniqueID: 3170614827
+    locked: 0
+  - name: Characters
+    uniqueID: 344667003
+    locked: 0
+  - name: Foreground
+    uniqueID: 3897664625
+    locked: 0
+  - name: VFX
+    uniqueID: 660802765
+    locked: 0

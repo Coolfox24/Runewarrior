@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4013465067426535393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4013465067426535391}
+  - component: {fileID: 4013465067426535390}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4013465067426535391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013465067426535393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4013465067426535390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013465067426535393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9db16dbb9d55841a2a1b21cd55264f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handPosition: {fileID: 0}
+  deckPosition: {fileID: 0}
+  enemySpawnPoint: {fileID: 0}
+  playerSpawnPoint: {fileID: 0}
+  cardEmphasisPosition: {fileID: 0}
+  cardPrefab: {fileID: 6574234176443743505, guid: cc6f5d962660aef428c5bc1b120ac42e, type: 3}
+  attackTextContainer: {fileID: 0}
+  attackText: {fileID: 0}
+  infoBox: {fileID: 0}
+  infoText: {fileID: 0}
+  music: {fileID: 8300000, guid: a2dae23c12bad1a40b012333e93af540, type: 3}
+  victoryFanfare: {fileID: 8300000, guid: 4234af0fa269d404bad8bd4289dfc26b, type: 3}
+  useScaling: 1

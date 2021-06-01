@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df30c22d7fe79643a2aa6ec0823149f, type: 3}
+  m_Name: Magic Missile
+  m_EditorClassIdentifier: 
+  runesRequired:
+  - rune: 6
+    amount: 3
+  totalPotency: 27
+  potencyTriggersInAnimation: 3
+  attackAnimation: {fileID: 7400000, guid: c0a4342b7a165184ba3b9425c4f86359, type: 2}
+  isMelee: 0
+  spellVFX: {fileID: 7686019451573772364, guid: d26870911e829da4b8c2a067f193c453, type: 3}
+  animationSFX: {fileID: 8300000, guid: 187aa3861825c1240ad0c00b380bdd5c, type: 3}
+  attackName: Magic Missile

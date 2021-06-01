@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f253f05d76771aa4f90eed15bb3a7dec, type: 3}
+  m_Name: SkeletonAttack2
+  m_EditorClassIdentifier: 
+  totalPotency: 40
+  potencyTriggersInAnimation: 2
+  attackAnimation: {fileID: 7400000, guid: 40ac12204bb10ad4f88b348d8b9dad19, type: 2}
+  isMelee: 1
+  spellVFX: {fileID: 0}
+  animationSFX: {fileID: 8300000, guid: 03667382d7ef26b4a9645f6157b3a56f, type: 3}
+  attackName: Double Swipe
+  runesRequired:
+  - rune: 1
+    amount: 1

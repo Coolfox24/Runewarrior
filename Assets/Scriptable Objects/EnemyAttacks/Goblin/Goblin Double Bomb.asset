@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f253f05d76771aa4f90eed15bb3a7dec, type: 3}
+  m_Name: Goblin Double Bomb
+  m_EditorClassIdentifier: 
+  totalPotency: 50
+  potencyTriggersInAnimation: 2
+  attackAnimation: {fileID: 7400000, guid: 723c6dc08a2956642a046007a4cd77d6, type: 2}
+  isMelee: 0
+  spellVFX: {fileID: 7245737197791963690, guid: a6121200f318f8242bbefe346e920291, type: 3}
+  animationSFX: {fileID: 8300000, guid: 722e0056e1d383a44bf7df86fc546625, type: 3}
+  attackName: Double Bomb
+  runesRequired:
+  - rune: 2
+    amount: 1
