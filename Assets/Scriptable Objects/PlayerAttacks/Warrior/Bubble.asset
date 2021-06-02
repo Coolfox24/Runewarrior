@@ -17,8 +17,8 @@ MonoBehaviour:
     amount: 1
   totalPotency: 15
   potencyTriggersInAnimation: 1
-  attackAnimation: {fileID: 7400000, guid: 16b7317c0d2582f44b0c59b11cf10670, type: 2}
+  attackAnimation: {fileID: 7400000, guid: 3d78ec8023dcbce43bd00b036940dfc3, type: 2}
   isMelee: 0
-  spellVFX: {fileID: 7407575421344292707, guid: c68bc94d0a6d32442a9d96c111e3e89a, type: 3}
+  spellVFX: {fileID: 6789605136540181203, guid: cf2d95a25055a734ea7eca53fdda3f02, type: 3}
   animationSFX: {fileID: 8300000, guid: 187aa3861825c1240ad0c00b380bdd5c, type: 3}
   attackName: Bubble

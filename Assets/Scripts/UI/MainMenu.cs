@@ -10,6 +10,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] GameObject optionsScreen;
     [SerializeField] Slider volumeSlider;
     [SerializeField] Slider sfxSlider;
+    [SerializeField] AudioClip mainMenuTheme;
+
+    private void Start()
+    {
+        FindObjectOfType<MusicPlayer>().PlayMusic(mainMenuTheme);
+    }
 
     public void StartGame()
     {

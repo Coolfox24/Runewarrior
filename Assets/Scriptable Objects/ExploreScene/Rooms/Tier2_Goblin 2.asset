@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb863da68326ef147babf607159a1da1, type: 3}
+  m_Name: Tier2_Goblin 2
+  m_EditorClassIdentifier: 
+  backgroundColor: {r: 1, g: 0.6145571, b: 0.4669811, a: 1}
+  rewardType: 2
+  rewardAmount: 3
+  rewardsShown: 4
+  backgroundTiles: {fileID: 2367087044895843592, guid: e6e3e67a928b2eb49ba9616c31e1bd35, type: 3}
+  roomSprite: {fileID: 1892797195884439605, guid: 758d2116648069b41b0f83a4fe825565, type: 3}
+  enemy: {fileID: 11400000, guid: 055bf8dafb62f114791e8f8d0a8e45fa, type: 2}
+  roomTier: 2

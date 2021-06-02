@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb863da68326ef147babf607159a1da1, type: 3}
+  m_Name: Tier3_RedImp 1
+  m_EditorClassIdentifier: 
+  backgroundColor: {r: 0.5754717, g: 0.5752801, b: 0.5727572, a: 0}
+  rewardType: 1
+  rewardAmount: 2
+  rewardsShown: 5
+  backgroundTiles: {fileID: 2367087044895843592, guid: 67c08ac54a9770441b12c716e126797b, type: 3}
+  roomSprite: {fileID: -4007876193006990313, guid: 758d2116648069b41b0f83a4fe825565, type: 3}
+  enemy: {fileID: 11400000, guid: 25eaafbec689f8c4ab1aa184461a336a, type: 2}
+  roomTier: 3

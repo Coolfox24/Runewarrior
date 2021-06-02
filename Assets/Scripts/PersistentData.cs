@@ -22,6 +22,8 @@ public class PersistentData : MonoBehaviour
     List<Room> currentlyExploredRooms;
     Room lastEntered;
 
+    public bool showInfo = true;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -36,7 +38,6 @@ public class PersistentData : MonoBehaviour
         }
         _PlayerCharacter = PLAYER_CHARACTER;
         GenerateStartingDeck();
-
         currentlyExploredRooms = new List<Room>();
     }
 

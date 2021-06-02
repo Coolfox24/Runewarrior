@@ -69,7 +69,6 @@ public class HealthBarUI : MonoBehaviour
             GameObject go = Instantiate(buffPrefab, buffSpot, Quaternion.identity, this.gameObject.transform);
             go.GetComponent<BuffIcons>().Setup(type, turnsRemaining, stackCount);
             currentBuffs.Add(go.GetComponent<BuffIcons>());
-            Debug.Log(go.GetComponent<BuffIcons>().GetRune());
         }
         else
         {
