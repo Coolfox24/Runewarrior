@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab17023e356d4f48ae3d33b152ca060, type: 3}
+  m_Name: Credits
+  m_EditorClassIdentifier: 
+  sections:
+  - sectionHeader: Music
+    authors:
+    - author: Ben Burnes
+      website: abstractionmusic.com
+  - sectionHeader: Audio
+    authors:
+    - author: Fantasy Musica
+      website: https://opengameart.org/content/fanfare-01
+    - author: qubodop
+      website: https://freesound.org/people/qubodup/sounds/59992/
+    - author: spookymodem
+      website: https://freesound.org/people/spookymodem/sounds/249819/
+    - author: RedRoxPeterPepper
+      website: https://freesound.org/people/RedRoxPeterPepper/sounds/420252/
+    - author: qubodop
+      website: https://opengameart.org/content/arrow-hit-twang
+    - author: Blender Foundation
+      website: https://opengameart.org/content/flap-splat-poo-yo-frankie
+    - author: StarNinjas
+      website: https://opengameart.org/content/7-eating-crunches
+    - author: Unnamed
+      website: https://opengameart.org/content/9-explosion-sounds
+    - author: rubberduck
+      website: https://opengameart.org/content/80-cc0-rpg-sfx
+    - author: will_leamon
+      website: https://opengameart.org/content/fleshy-fight-sounds
+    - author: qubodup
+      website: Ice and Electricity Magic by Iwan 'qubodup' Gabovitch http://opengameart.org/users/qubodup
+    - author: (c) copyright Blender Foundation | apricot.blender.org
+      website: https://opengameart.org/content/sfxthrow
+    - author: rubberduck
+      website: https://opengameart.org/content/40-cc0-water-splash-slime-sfx
+    - author: RandomMind
+      website: https://opengameart.org/content/sea-and-river-wave-sounds
+    - author: Rocha57
+      website: https://opengameart.org/content/spin
+    - author: Jute
+      website: https://opengameart.org/content/thunder-rain-and-wind
+    - author: Shizhao
+      website: https://opengameart.org/content/water-harp
+  - sectionHeader: Sprites
+    authors:
+    - author: SanctumPixel
+      website: https://sanctumpixel.itch.io/imp-axe-demon-pixel-art-character
+    - author: Astro Bob
+      website: https://astrobob.itch.io/arcane-archer
+    - author: Luiz Melo
+      website: https://luizmelo.itch.io/
+  - sectionHeader: Other Images
+    authors:
+    - author: George Bailey
+      website: https://opengameart.org/content/16x16-game-assets
+    - author: Kenney
+      website: ey.nl/assets
+    - author: "\xC9crivain"
+      website: ey.nl/asshttps://opengameart.org/content/fossil-cavets
+    - author: Wave
+      website: http://pixelartmaker.com/art/3d09f238aa130c2
+    - author: Randalinski
+      website: https://opengameart.org/content/rotating-arrow-projectile
+    - author: Art by MrBeast. Commissioned by OpenGameArt.org
+      website: opengameart.org
+    - author: hc
+      website: https://opengameart.org/content/particle-effects
+    - author: CodeManu
+      website: https://codemanu.itch.io/pixelart-effect-pack/download/eyJleHBpcmVzIjoxNjIxNjkxNTczLCJpZCI6MjgxOTU5fQ%3d%3d.M8d3Xi99OJabv8SHH%2f%2fNTg2KgfA%3d
+    - author: LittleFieryOne
+      website: https://opengameart.org/content/spells-and-company
+  - sectionHeader: Programming
+    authors:
+    - author: Matt Goulden
+      website: github.com/coolfox24

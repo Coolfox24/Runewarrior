@@ -17,8 +17,8 @@ MonoBehaviour:
     amount: 1
   totalPotency: 15
   potencyTriggersInAnimation: 1
-  attackAnimation: {fileID: 7400000, guid: 16b7317c0d2582f44b0c59b11cf10670, type: 2}
+  attackAnimation: {fileID: 7400000, guid: 43787ac3049c83946bec747ed48e91f1, type: 2}
   isMelee: 0
-  spellVFX: {fileID: 7686019451573772364, guid: d26870911e829da4b8c2a067f193c453, type: 3}
+  spellVFX: {fileID: 7931371935881401031, guid: ffc97cfd821e88248925aa7336eb8b7b, type: 3}
   animationSFX: {fileID: 8300000, guid: 187aa3861825c1240ad0c00b380bdd5c, type: 3}
   attackName: Thunder Bolt

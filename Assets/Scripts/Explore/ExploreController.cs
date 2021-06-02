@@ -19,6 +19,7 @@ public class ExploreController : MonoBehaviour
     [SerializeField] GameObject settingRooms;
 
     [SerializeField] AudioClip music;
+    [SerializeField] GameObject infoImage;
 
     List<Room> currentRooms;
     private int spawnedRooms;
@@ -48,6 +49,22 @@ public class ExploreController : MonoBehaviour
         uiUpdater.UpdateTopBar();
         currentRooms = data.GetRooms();
         spawnedRooms = 0;
+
+        if(data.showInfo)
+        {
+            infoImage.SetActive(true);
+        }
+
+        while(data.showInfo)
+        {
+            if(Input.GetMouseButton(0))
+            {
+                data.showInfo = false;
+                infoImage.SetActive(false);
+            }
+
+            yield return new WaitForEndOfFrame();
+        }
 
         FindObjectOfType<MusicPlayer>().PlayMusic(music);
         if (currentRooms.Count == 0)
