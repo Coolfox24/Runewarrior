@@ -34,6 +34,11 @@ public class MainMenu : MonoBehaviour
         optionsScreen.SetActive(false);
     }
 
+    public void ShowCreditsScreen()
+    {
+        SceneManager.LoadScene("CreditsScene");
+    }
+
     public void UpdateVolume()
     {
         GameSettings.instance.SetMusicVolume(volumeSlider.value);

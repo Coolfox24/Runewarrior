@@ -110,7 +110,6 @@ public class HealthBarUI : MonoBehaviour
                 count++;
             }
         }
-        Debug.Log("Buff Count: " + count);
         return count;
     }
 

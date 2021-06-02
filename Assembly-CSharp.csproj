@@ -80,11 +80,14 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\EnemyData.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\GameSettings.cs" />
-    <Compile Include="Assets\Scripts\DeathController.cs" />
+    <Compile Include="Assets\Scripts\Fight\DeathController.cs" />
     <Compile Include="Assets\Scripts\UI\WinScreen.cs" />
     <Compile Include="Assets\Scripts\Fight\Buffs.cs" />
     <Compile Include="Assets\Scripts\UI\BuffIcons.cs" />
     <Compile Include="Assets\Scripts\UI\Fade.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\Credits.cs" />
+    <Compile Include="Assets\Scripts\UI\CreditsScreen.cs" />
+    <Compile Include="Assets\Scripts\UI\CreditsEntry.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
