@@ -21,6 +21,17 @@ public class PersistentData : MonoBehaviour
 
     List<Room> currentlyExploredRooms;
     Room lastEntered;
+    private int gameLength;
+
+    public void SetGameLength(int length)
+    {
+        gameLength = length;
+    }
+
+    public int GetGameLength()
+    {
+        return gameLength;
+    }
 
     public bool showInfo = true;
 

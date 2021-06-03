@@ -15,7 +15,7 @@ MonoBehaviour:
   runesRequired:
   - rune: 6
     amount: 1
-  totalPotency: 15
+  totalPotency: 18
   potencyTriggersInAnimation: 1
   attackAnimation: {fileID: 7400000, guid: 16b7317c0d2582f44b0c59b11cf10670, type: 2}
   isMelee: 0

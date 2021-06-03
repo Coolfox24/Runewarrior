@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Room : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Room : MonoBehaviour
     [SerializeField] Color waterRewardColor;
     [SerializeField] Color windRewardColor;
     [SerializeField] Color arcaneRewardColor;
+    [SerializeField] TextMeshProUGUI tier;
 
     //TODO Make this randomed by Explore Controller
     [SerializeField] RoomData myRoom;
@@ -53,6 +55,7 @@ public class Room : MonoBehaviour
         enemySprite.sprite = myRoom.GetEnemy().GetExploreSprite();
         background.color = myRoom.Getbackground();
         background.sprite = myRoom.GetRoomSprite();
+        tier.text = myRoom.GetRoomTier().ToString();
         SetRewardsColor();
     }
 
@@ -101,7 +104,7 @@ public class Room : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if (!isSkipped && !isCleared && !exploreController.IsViewingDeck())
+        if (!isSkipped && !isCleared && !exploreController.IsViewingDeck() && !exploreController.IsViewingOptions())
         {
             border.enabled = true;
         }
@@ -118,7 +121,7 @@ public class Room : MonoBehaviour
     private void OnMouseDown()
     {
         //Load Scene
-        if (!isSkipped && !isCleared && !exploreController.IsViewingDeck())
+        if (!isSkipped && !isCleared && !exploreController.IsViewingDeck() && !exploreController.IsViewingOptions())
         {  
             exploreController.SetLastExploredRoom(this);
             exploreController.LoadFightScene();

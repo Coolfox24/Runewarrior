@@ -68,11 +68,11 @@ public class Buffs : MonoBehaviour
                     waterReductionTurns = 2;
                     waterReduction = (potency * 0.5f) * runes.amount / totalRunes;
                     waterReduction = 1 - (waterReduction/100);
-                    myHealthBar.AddBuff(RuneTags.WATER, waterReductionTurns, 0);
+                    myHealthBar.AddBuff(RuneTags.WATER, waterReductionTurns, 0, waterReduction);
                     break;
                 case RuneTags.WIND:
                     windDrawTurnsRemaining = Mathf.Ceil(potency * 0.02f * (float)runes.amount / totalRunes);
-                    myHealthBar.AddBuff(RuneTags.WIND, (int)windDrawTurnsRemaining, 0);
+                    myHealthBar.AddBuff(RuneTags.WIND, (int)windDrawTurnsRemaining, 0, 0);
                     break;
                 default:
                     break;
@@ -90,18 +90,18 @@ public class Buffs : MonoBehaviour
                 case RuneTags.FIRE:
                     burnTurnsRemaining = 2;
                     burnAmount = potency * 0.5f * runes.amount / totalRunes * animationTriggers;
-                    myHealthBar.AddBuff(RuneTags.FIRE, burnTurnsRemaining, 0);
+                    myHealthBar.AddBuff(RuneTags.FIRE, burnTurnsRemaining, 0, burnAmount);
                     break;
                 case RuneTags.THUNDER:
                     isShocked = true;
                     shockedAmount =  1f + (1f / (100 / potency) * runes.amount / totalRunes);
-                    myHealthBar.AddBuff(RuneTags.THUNDER, 1, 0);
+                    myHealthBar.AddBuff(RuneTags.THUNDER, 1, 0, shockedAmount);
                     break;
                 case RuneTags.PHYSICAL:
                     bleedCount++;
                     bleedTurnsRemaining = 2; //Reset back to 2
                     bleedAmount += potency * 0.25f * runes.amount / totalRunes;
-                    myHealthBar.AddBuff(RuneTags.PHYSICAL, bleedTurnsRemaining, 0);
+                    myHealthBar.AddBuff(RuneTags.PHYSICAL, bleedTurnsRemaining, bleedCount, bleedAmount);
                     break;
                 default:
                     break;
@@ -118,7 +118,7 @@ public class Buffs : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
 
             bleedTurnsRemaining--;
-            myHealthBar.UpdateBuff(RuneTags.PHYSICAL, bleedTurnsRemaining, 0);
+            myHealthBar.UpdateBuff(RuneTags.PHYSICAL, bleedTurnsRemaining, bleedCount, bleedAmount);
             //Spawn a VFX for bleeding or something here
             myHealth.TakeDamage((int)bleedAmount);
 
@@ -140,7 +140,7 @@ public class Buffs : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
 
             burnTurnsRemaining--;
-            myHealthBar.UpdateBuff(RuneTags.FIRE, burnTurnsRemaining, 0);
+            myHealthBar.UpdateBuff(RuneTags.FIRE, burnTurnsRemaining, 0, burnAmount);
             //SPawn a VFX for bleeding or something here
             myHealth.TakeDamage((int)burnAmount);
 
@@ -153,7 +153,7 @@ public class Buffs : MonoBehaviour
         if (isShocked == true)
         {
             isShocked = false;
-            myHealthBar.UpdateBuff(RuneTags.THUNDER, 0, 0);
+            myHealthBar.UpdateBuff(RuneTags.THUNDER, 0, 0, shockedAmount);
             return shockedAmount;
         }
 
@@ -165,7 +165,7 @@ public class Buffs : MonoBehaviour
         if(windDrawTurnsRemaining > 0)
         {
             windDrawTurnsRemaining--;
-            myHealthBar.UpdateBuff(RuneTags.WIND, (int)windDrawTurnsRemaining, 0);
+            myHealthBar.UpdateBuff(RuneTags.WIND, (int)windDrawTurnsRemaining, 0, 0);
             return true;
         }
         return false;
@@ -176,7 +176,7 @@ public class Buffs : MonoBehaviour
         if( waterReductionTurns > 0)
         {
             waterReductionTurns--;
-            myHealthBar.UpdateBuff(RuneTags.WATER, waterReductionTurns, 0);
+            myHealthBar.UpdateBuff(RuneTags.WATER, waterReductionTurns, 0, waterReduction);
             return waterReduction;
         }
         return 1;

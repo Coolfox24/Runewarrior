@@ -17,6 +17,6 @@ MonoBehaviour:
   rewardAmount: 2
   rewardsShown: 5
   backgroundTiles: {fileID: 2367087044895843592, guid: ea5db33c7455e9e4b816b445c235b826, type: 3}
-  roomSprite: {fileID: 8393383421184430973, guid: ce06fb5eed3b87444976abfccb78342d, type: 3}
+  roomSprite: {fileID: 1224284494713185789, guid: 758d2116648069b41b0f83a4fe825565, type: 3}
   enemy: {fileID: 11400000, guid: 2b976ae39920b5640a2ed14cd317cf83, type: 2}
   roomTier: 3

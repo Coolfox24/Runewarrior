@@ -27,7 +27,7 @@ public class GameSettings : MonoBehaviour
         }
         else
         {
-            SetMusicVolume(1);
+            SetMusicVolume(0.3f);
         }
 
         if(PlayerPrefs.HasKey("SFX_VOLUME"))
@@ -36,7 +36,7 @@ public class GameSettings : MonoBehaviour
         }
         else
         {
-            SetSFXVolume(1);
+            SetSFXVolume(0.4f);
         }
     }
 

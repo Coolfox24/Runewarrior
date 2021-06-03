@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ExploreController : MonoBehaviour
 {
@@ -17,9 +18,13 @@ public class ExploreController : MonoBehaviour
     [SerializeField] Transform deckHolder;
     [SerializeField] GameObject viewDeckBlackout;
     [SerializeField] GameObject settingRooms;
+    [SerializeField] TMPro.TextMeshProUGUI roomsRemaining;
+    [SerializeField] int gameLength = 10;
 
     [SerializeField] AudioClip music;
     [SerializeField] GameObject infoImage;
+
+    [SerializeField] GameObject options;
 
     List<Room> currentRooms;
     private int spawnedRooms;
@@ -50,6 +55,7 @@ public class ExploreController : MonoBehaviour
         currentRooms = data.GetRooms();
         spawnedRooms = 0;
 
+        data.SetGameLength(gameLength);
         if(data.showInfo)
         {
             infoImage.SetActive(true);
@@ -77,6 +83,7 @@ public class ExploreController : MonoBehaviour
             spawnedRooms++;
 
             yield return StartCoroutine(FindObjectOfType<Fade>().FadeIn());
+            roomsRemaining.text = "Rooms Until Boss : " + gameLength;
         }
         else
         {
@@ -95,10 +102,12 @@ public class ExploreController : MonoBehaviour
                 go.GetComponent<Room>().Setup(room.IsSkipped(), room.IsCleared());
             }
 
+            roomsRemaining.text = "Rooms Until Boss : " + (gameLength - data.GetClearedLevels());
+
             //Before Generating new rooms Give player cards to pick from
             yield return StartCoroutine(PickRewards());
 
-            if (data.GetClearedLevels() < 8)
+            if (data.GetClearedLevels() < gameLength)
             {
                 //Add new rooms for player to explore from last room entered
                 //Need check here to see if we should just spawn 1 room - which is the boss room
@@ -238,7 +247,7 @@ public class ExploreController : MonoBehaviour
             mask = 0;
         }
         settingRooms.layer = mask;
-        foreach (Room room in currentRooms)
+        foreach (Room room in FindObjectsOfType<Room>())
         {
             if (room == null)
             {
@@ -477,5 +486,44 @@ public class ExploreController : MonoBehaviour
         data.AddHealth(healthToAdd);
         uiUpdater.UpdateHealth();
         choicesRemaining = 0;
+    }
+
+    private bool viewOptions = false;
+
+    public bool IsViewingOptions()
+    {
+        return viewOptions;
+    }
+
+    private bool firstSetup = true;
+
+    public void ShowOptions()
+    {
+        viewOptions = true;
+        options.SetActive(true);
+        SetupOptions();
+    }
+
+    public void ToggleOptions()
+    {
+        viewOptions = !viewOptions;
+        options.SetActive(viewOptions);
+        SetupOptions();
+    }
+
+    private void SetupOptions()
+    {
+        if (firstSetup)
+        {
+            firstSetup = false;
+            GameObject.Find("VolumeSlider").GetComponent<Slider>().value = FindObjectOfType<GameSettings>().GetMusicVolume();
+            GameObject.Find("SFX Slider").GetComponent<Slider>().value = FindObjectOfType<GameSettings>().GetSFXVolume();
+        }
+    }
+
+    public void HideOptions()
+    {
+        viewOptions = false;
+        options.SetActive(false);
     }
 }

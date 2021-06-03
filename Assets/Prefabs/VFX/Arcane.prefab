@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAnimation: {fileID: 7400000, guid: d559de33435b45e469693591b1fe6b47, type: 2}
-  soundEffect: {fileID: 0}
+  soundEffect: {fileID: 8300000, guid: 2d93e79d8fcc3ee4d8a89a70471f9d3b, type: 3}
   isProjectile: 0
   aimPosition: 0
   isStationary: 0

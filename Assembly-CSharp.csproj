@@ -53,21 +53,29 @@
     <UnityVersion>2020.3.0f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\UI\CreditsEntry.cs" />
     <Compile Include="Assets\Scripts\Fight\PlayerAttackController.cs" />
     <Compile Include="Assets\Scripts\UI\HealthBarUI.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Fight\Rune.cs" />
     <Compile Include="Assets\Scripts\UI\DiscardUI.cs" />
     <Compile Include="Assets\Scripts\UI\CurrentAttackUI.cs" />
+    <Compile Include="Assets\Scripts\GameSettings.cs" />
+    <Compile Include="Assets\Scripts\Fight\DeathController.cs" />
     <Compile Include="Assets\Scripts\Fight\VFX.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Card.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\Credits.cs" />
     <Compile Include="Assets\Scripts\Fight\TargetPoints.cs" />
     <Compile Include="Assets\Scripts\Explore\ExploreController.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\AudioPlayer.cs" />
+    <Compile Include="Assets\Scripts\UI\WinScreen.cs" />
     <Compile Include="Assets\Scripts\Explore\Room.cs" />
+    <Compile Include="Assets\Scripts\UI\CreditsScreen.cs" />
     <Compile Include="Assets\Scripts\PersistentData.cs" />
     <Compile Include="Assets\Scripts\Fight\DamageText.cs" />
+    <Compile Include="Assets\Scripts\UI\Fade.cs" />
     <Compile Include="Assets\Scripts\UI\ExploreUIUpdater.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\UI\EnemyHealthUI.cs" />
@@ -77,17 +85,10 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\RoomData.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerHealthUI.cs" />
     <Compile Include="Assets\Scripts\Fight\GameController.cs" />
-    <Compile Include="Assets\Scripts\Scriptable Objects\EnemyData.cs" />
-    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\GameSettings.cs" />
-    <Compile Include="Assets\Scripts\Fight\DeathController.cs" />
-    <Compile Include="Assets\Scripts\UI\WinScreen.cs" />
-    <Compile Include="Assets\Scripts\Fight\Buffs.cs" />
     <Compile Include="Assets\Scripts\UI\BuffIcons.cs" />
-    <Compile Include="Assets\Scripts\UI\Fade.cs" />
-    <Compile Include="Assets\Scripts\Scriptable Objects\Credits.cs" />
-    <Compile Include="Assets\Scripts\UI\CreditsScreen.cs" />
-    <Compile Include="Assets\Scripts\UI\CreditsEntry.cs" />
+    <Compile Include="Assets\Scripts\Fight\Buffs.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\UI\BuffTooltip.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -757,6 +758,12 @@
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
@@ -795,12 +802,6 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
