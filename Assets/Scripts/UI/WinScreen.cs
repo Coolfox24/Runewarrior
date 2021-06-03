@@ -11,6 +11,8 @@ public class WinScreen : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI runesText;
     [SerializeField] TextMeshProUGUI typeText;
+    [SerializeField] TextMeshProUGUI highScoreText;
+    [SerializeField] TextMeshProUGUI highScoreAmount;
 
     PersistentData data;
 
@@ -22,6 +24,26 @@ public class WinScreen : MonoBehaviour
         scoreText.text = data.GetCurHealth().ToString();
         runesText.text = data.GetStartingDeck().Count.ToString();
         typeText.text = GetDeckAffinity(data.GetStartingDeck()).ToString();
+
+        int highScore = PlayerPrefs.GetInt("highScore", -1);
+
+        if (highScore == -1)
+        {
+            //Set High Score
+            PlayerPrefs.SetInt("highScore", data.GetCurHealth());
+            highScoreAmount.gameObject.SetActive(false);
+            highScoreText.text = "New High Score!";
+        }
+        else if (highScore < data.GetCurHealth())
+        {
+            highScoreAmount.gameObject.SetActive(false);
+            highScoreText.text = "New High Score!";
+        }
+        else
+        {
+            highScoreAmount.text = highScore.ToString();
+        }
+        
     }
 
     private RuneTags GetDeckAffinity(List<Card> deck)

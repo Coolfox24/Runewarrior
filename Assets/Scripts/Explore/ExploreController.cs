@@ -83,6 +83,7 @@ public class ExploreController : MonoBehaviour
             spawnedRooms++;
 
             yield return StartCoroutine(FindObjectOfType<Fade>().FadeIn());
+            roomsRemaining.text = "Rooms Until Boss : " + gameLength;
         }
         else
         {
@@ -246,7 +247,7 @@ public class ExploreController : MonoBehaviour
             mask = 0;
         }
         settingRooms.layer = mask;
-        foreach (Room room in currentRooms)
+        foreach (Room room in FindObjectsOfType<Room>())
         {
             if (room == null)
             {

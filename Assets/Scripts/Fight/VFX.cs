@@ -61,6 +61,7 @@ public class VFX : MonoBehaviour
             {
                 transform.position = Vector2.Lerp(startingPosition, targetPosition, currentFrame);
                 currentFrame += speed * Time.deltaTime;
+                Debug.Log(currentFrame);
                 yield return new WaitForEndOfFrame();
             }
         }

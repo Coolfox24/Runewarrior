@@ -36,7 +36,7 @@ public class BuffIcons : MonoBehaviour
                 GetComponentInParent<HealthBarUI>().SetTooltip(shockedSprite, "Shock", "Turns Remaining: " + turnsRemaining.text, "Multiplier: " + (potency * 100) + "%" , " ");
                 break;
             case RuneTags.WATER:
-                GetComponentInParent<HealthBarUI>().SetTooltip(shieldSprite, "Water Shield", "Turns Remaining: " + turnsRemaining.text, "DR: " + ((1 - potency) * 100) + "%", " ");
+                GetComponentInParent<HealthBarUI>().SetTooltip(shieldSprite, "Water Shield", "Turns Remaining: " + turnsRemaining.text, "DR: " + System.Math.Round(((1 - potency) * 100), 2) + "%", " ");
                 break;
             case RuneTags.WIND:
                 GetComponentInParent<HealthBarUI>().SetTooltip(windSprite, "Airspeed", "Extra Card Draw", "Turns Remaining: " + turnsRemaining.text, " ");
