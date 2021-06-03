@@ -55,7 +55,7 @@ public class PlayerAttackController : MonoBehaviour
                 allAttacks += playerAttack.name + " + ";
             }
 
-            return curAttack[0].GetName();
+            return "(" + curAttack[0].GetTotalRunes() + ") " +  curAttack[0].GetName();
             //return allAttacks;
         }
         //If no runes selected, player can pass to draw more

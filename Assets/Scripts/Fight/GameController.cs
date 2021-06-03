@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using TMPro;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 
@@ -35,6 +36,10 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioClip music;
     [SerializeField] AudioClip victoryFanfare;
     [SerializeField] CinemachineVirtualCamera victoryCam;
+    [SerializeField] AudioClip bossMusic;
+
+    [Header("Options")]
+    [SerializeField] GameObject options;
 
     [Header("For Testing")]
     [SerializeField] bool useScaling = true;
@@ -76,7 +81,15 @@ public class GameController : MonoBehaviour
 
         ReshuffleDeck();
 
-        FindObjectOfType<MusicPlayer>().PlayMusic(music);
+        if (data.GetClearedLevels() < data.GetGameLength())
+        {
+            FindObjectOfType<MusicPlayer>().PlayMusic(music);
+        }
+        else
+        {
+            FindObjectOfType<MusicPlayer>().PlayMusic(bossMusic);
+        }
+
         yield return StartCoroutine(FindObjectOfType<Fade>().FadeIn());
 
         StartCoroutine(DrawCard(3));
@@ -238,6 +251,10 @@ public class GameController : MonoBehaviour
     
     public void Attack()
     {
+        if(IsViewingOptions() == true)
+        {
+            return;
+        }
         StartCoroutine(EndTurn());
     }
 
@@ -331,7 +348,7 @@ public class GameController : MonoBehaviour
         FindObjectOfType<PersistentData>().SetHealth(
             playerAttackController.GetComponent<Health>().GetHealth()
             );
-        if (FindObjectOfType<PersistentData>().GetLastExploredRoom().GetRoomTier() < 6)
+        if (FindObjectOfType<PersistentData>().GetLastExploredRoom().GetRoomTier() < 5)
         {
             SceneManager.LoadScene("ExploreScene");
         }
@@ -346,7 +363,7 @@ public class GameController : MonoBehaviour
 
     public bool CanInteract()
     {
-        if(curState == GameState.player_turn)
+        if(curState == GameState.player_turn && IsViewingOptions() == false)
         {
             return true;
         }
@@ -377,5 +394,54 @@ public class GameController : MonoBehaviour
     public float GetEnemyScaling()
     {
         return enemyScaling;
+    }
+
+    private bool viewOptions = false;
+
+    public bool IsViewingOptions()
+    {
+        return viewOptions;
+    }
+
+    private bool firstSetup = true;
+
+    public void ShowOptions()
+    {
+        viewOptions = true;
+        options.SetActive(true);
+        Time.timeScale = 0;
+        SetupOptions();
+    }
+
+    public void ToggleOptions()
+    {
+        viewOptions = !viewOptions;
+        options.SetActive(viewOptions);
+        if(viewOptions)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+        SetupOptions();
+    }
+
+    private void SetupOptions()
+    {
+        if (firstSetup)
+        {
+            firstSetup = false;
+            GameObject.Find("VolumeSlider").GetComponent<Slider>().value = FindObjectOfType<GameSettings>().GetMusicVolume();
+            GameObject.Find("SFX Slider").GetComponent<Slider>().value = FindObjectOfType<GameSettings>().GetSFXVolume();
+        }
+    }
+
+    public void HideOptions()
+    {
+        viewOptions = false;
+        options.SetActive(false);
+        Time.timeScale = 1;
     }
 }

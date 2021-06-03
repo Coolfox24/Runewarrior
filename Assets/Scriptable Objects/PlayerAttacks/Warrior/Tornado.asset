@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df30c22d7fe79643a2aa6ec0823149f, type: 3}
+  m_Name: Tornado
+  m_EditorClassIdentifier: 
+  runesRequired:
+  - rune: 5
+    amount: 3
+  totalPotency: 25
+  potencyTriggersInAnimation: 1
+  attackAnimation: {fileID: 7400000, guid: 16b7317c0d2582f44b0c59b11cf10670, type: 2}
+  isMelee: 0
+  spellVFX: {fileID: 8482345390045551916, guid: 5e4ca87fd8aa0c343b92cb6c788c95d5, type: 3}
+  animationSFX: {fileID: 8300000, guid: 187aa3861825c1240ad0c00b380bdd5c, type: 3}
+  attackName: Tornado

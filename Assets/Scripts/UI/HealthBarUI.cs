@@ -17,6 +17,7 @@ public class HealthBarUI : MonoBehaviour
     [SerializeField] float iconOffset = 0.5f;
 
     [SerializeField] GameObject buffPrefab;
+    [SerializeField] BuffTooltip myTooltip;
 
     List<BuffIcons> currentBuffs;
 
@@ -44,13 +45,13 @@ public class HealthBarUI : MonoBehaviour
         }
     }
 
-    public void AddBuff(RuneTags type, int turnsRemaining, int stackCount)
+    public void AddBuff(RuneTags type, int turnsRemaining, int stackCount, float potency)
     {
         foreach(BuffIcons buff in currentBuffs)
         {
             if(buff.GetRune() == type)
             {
-                buff.UpdateIcon(turnsRemaining, stackCount);
+                buff.UpdateIcon(turnsRemaining, stackCount, potency);
                 return;
             }
         }
@@ -67,7 +68,7 @@ public class HealthBarUI : MonoBehaviour
             }
 
             GameObject go = Instantiate(buffPrefab, buffSpot, Quaternion.identity, this.gameObject.transform);
-            go.GetComponent<BuffIcons>().Setup(type, turnsRemaining, stackCount);
+            go.GetComponent<BuffIcons>().Setup(type, turnsRemaining, stackCount, potency);
             currentBuffs.Add(go.GetComponent<BuffIcons>());
         }
         else
@@ -83,7 +84,7 @@ public class HealthBarUI : MonoBehaviour
             }
 
             GameObject go = Instantiate(buffPrefab, buffSpot, Quaternion.identity, this.gameObject.transform);
-            go.GetComponent<BuffIcons>().Setup(type, turnsRemaining, stackCount);
+            go.GetComponent<BuffIcons>().Setup(type, turnsRemaining, stackCount, potency);
             currentBuffs.Add(go.GetComponent<BuffIcons>());
         }
         ResetBuffPositions();
@@ -126,7 +127,7 @@ public class HealthBarUI : MonoBehaviour
         return count;
     }
 
-    public void UpdateBuff(RuneTags type, int turnsRemaining, int stackCount)
+    public void UpdateBuff(RuneTags type, int turnsRemaining, int stackCount, float potency)
     {
         if(turnsRemaining == 0)
         {
@@ -146,7 +147,7 @@ public class HealthBarUI : MonoBehaviour
         {
             if(buff.GetRune() == type)
             {
-                buff.UpdateIcon(turnsRemaining, stackCount);
+                buff.UpdateIcon(turnsRemaining, stackCount, potency);
             }
         }
         ResetBuffPositions();
@@ -179,5 +180,16 @@ public class HealthBarUI : MonoBehaviour
                 debuffCount++;
             }
         }
+    }
+
+    public void SetTooltip(Sprite icon, string name, string text1, string text2, string text3)
+    {
+        myTooltip.gameObject.SetActive(true);
+        myTooltip.Setup(icon, name, text1, text2, text3);
+    }
+
+    public void UnsetTooltip()
+    {
+        myTooltip.gameObject.SetActive(false);
     }
 }
